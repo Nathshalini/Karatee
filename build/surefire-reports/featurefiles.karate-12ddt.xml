@@ -1,0 +1,180 @@
+<testsuite failures="4" name="featurefiles/karate-12ddt.feature" skipped="0" tests="4" time="3.112123">
+  <testcase classname="featurefiles.karate-12ddt" name="ddt testcase1" time="0.804095">
+    <failure message="karate-12ddt.feature:10 - status code was: 500, expected: 200, response time: 486, url: https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit, response: Missing parameter: Celsius.&#13;&#10;">Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius = 37" ................................................ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate-12ddt.feature:10 - status code was: 500, expected: 200, response time: 486, url: https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit, response: Missing parameter: Celsius.&#13;
+&#13;
+	at ✽.Then status 200 (karate-12ddt.feature:10)&#13;
+
+* print responseHeaders ................................................... skipped
+* print responseType ...................................................... skipped
+* print response .......................................................... skipped
+* match responseType == "xml" ............................................. skipped
+* assert responseTime &lt;= 1000 ............................................. skipped
+* match response //string == 98.6 ......................................... skipped</failure>
+  </testcase>
+  <testcase classname="featurefiles.karate-12ddt" name="ddt testcase1" time="0.781116">
+    <failure message="karate-12ddt.feature:10 - status code was: 500, expected: 200, response time: 486, url: https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit, response: Missing parameter: Celsius.&#13;&#10;">Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius = 37" ................................................ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate-12ddt.feature:10 - status code was: 500, expected: 200, response time: 486, url: https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit, response: Missing parameter: Celsius.&#13;
+&#13;
+	at ✽.Then status 200 (karate-12ddt.feature:10)&#13;
+
+* print responseHeaders ................................................... skipped
+* print responseType ...................................................... skipped
+* print response .......................................................... skipped
+* match responseType == "xml" ............................................. skipped
+* assert responseTime &lt;= 1000 ............................................. skipped
+* match response //string == 98.6 ......................................... skipped
+Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius = 40" ................................................ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate-12ddt.feature:10 - status code was: 500, expected: 200, response time: 486, url: https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit, response: Missing parameter: Celsius.&#13;
+&#13;
+	at ✽.Then status 200 (karate-12ddt.feature:10)&#13;
+
+* print responseHeaders ................................................... skipped
+* print responseType ...................................................... skipped
+* print response .......................................................... skipped
+* match responseType == "xml" ............................................. skipped
+* assert responseTime &lt;= 1000 ............................................. skipped
+* match response //string == 104 .......................................... skipped</failure>
+  </testcase>
+  <testcase classname="featurefiles.karate-12ddt" name="ddt testcase2" time="0.743603">
+    <failure message="karate-12ddt.feature:30 - status code was: 500, expected: 200, response time: 487, url: https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit, response: Missing parameter: Celsius.&#13;&#10;">Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius = 37" ................................................ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate-12ddt.feature:10 - status code was: 500, expected: 200, response time: 486, url: https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit, response: Missing parameter: Celsius.&#13;
+&#13;
+	at ✽.Then status 200 (karate-12ddt.feature:10)&#13;
+
+* print responseHeaders ................................................... skipped
+* print responseType ...................................................... skipped
+* print response .......................................................... skipped
+* match responseType == "xml" ............................................. skipped
+* assert responseTime &lt;= 1000 ............................................. skipped
+* match response //string == 98.6 ......................................... skipped
+Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius = 40" ................................................ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate-12ddt.feature:10 - status code was: 500, expected: 200, response time: 486, url: https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit, response: Missing parameter: Celsius.&#13;
+&#13;
+	at ✽.Then status 200 (karate-12ddt.feature:10)&#13;
+
+* print responseHeaders ................................................... skipped
+* print responseType ...................................................... skipped
+* print response .......................................................... skipped
+* match responseType == "xml" ............................................. skipped
+* assert responseTime &lt;= 1000 ............................................. skipped
+* match response //string == 104 .......................................... skipped
+Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius = 37" ................................................ passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate-12ddt.feature:30 - status code was: 500, expected: 200, response time: 487, url: https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit, response: Missing parameter: Celsius.&#13;
+&#13;
+	at ✽.Then status 200 (karate-12ddt.feature:30)&#13;
+
+* print responseHeaders ................................................... skipped
+* print responseType ...................................................... skipped
+* print response .......................................................... skipped
+* match responseType == "xml" ............................................. skipped
+* assert responseTime &lt;= 1000 ............................................. skipped
+* match response //string == 98.6 ......................................... skipped</failure>
+  </testcase>
+  <testcase classname="featurefiles.karate-12ddt" name="ddt testcase2" time="0.783309">
+    <failure message="karate-12ddt.feature:30 - status code was: 500, expected: 200, response time: 483, url: https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit, response: Missing parameter: Celsius.&#13;&#10;">Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius = 37" ................................................ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate-12ddt.feature:10 - status code was: 500, expected: 200, response time: 486, url: https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit, response: Missing parameter: Celsius.&#13;
+&#13;
+	at ✽.Then status 200 (karate-12ddt.feature:10)&#13;
+
+* print responseHeaders ................................................... skipped
+* print responseType ...................................................... skipped
+* print response .......................................................... skipped
+* match responseType == "xml" ............................................. skipped
+* assert responseTime &lt;= 1000 ............................................. skipped
+* match response //string == 98.6 ......................................... skipped
+Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius = 40" ................................................ passed
+When method post .......................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate-12ddt.feature:10 - status code was: 500, expected: 200, response time: 486, url: https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit, response: Missing parameter: Celsius.&#13;
+&#13;
+	at ✽.Then status 200 (karate-12ddt.feature:10)&#13;
+
+* print responseHeaders ................................................... skipped
+* print responseType ...................................................... skipped
+* print response .......................................................... skipped
+* match responseType == "xml" ............................................. skipped
+* assert responseTime &lt;= 1000 ............................................. skipped
+* match response //string == 104 .......................................... skipped
+Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius = 37" ................................................ passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate-12ddt.feature:30 - status code was: 500, expected: 200, response time: 487, url: https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit, response: Missing parameter: Celsius.&#13;
+&#13;
+	at ✽.Then status 200 (karate-12ddt.feature:30)&#13;
+
+* print responseHeaders ................................................... skipped
+* print responseType ...................................................... skipped
+* print response .......................................................... skipped
+* match responseType == "xml" ............................................. skipped
+* assert responseTime &lt;= 1000 ............................................. skipped
+* match response //string == 98.6 ......................................... skipped
+Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius = 40" ................................................ passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate-12ddt.feature:30 - status code was: 500, expected: 200, response time: 483, url: https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit, response: Missing parameter: Celsius.&#13;
+&#13;
+	at ✽.Then status 200 (karate-12ddt.feature:30)&#13;
+
+* print responseHeaders ................................................... skipped
+* print responseType ...................................................... skipped
+* print response .......................................................... skipped
+* match responseType == "xml" ............................................. skipped
+* assert responseTime &lt;= 1000 ............................................. skipped
+* match response //string == 104 .......................................... skipped</failure>
+  </testcase>
+</testsuite>

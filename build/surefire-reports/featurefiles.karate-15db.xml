@@ -1,0 +1,50 @@
+<testsuite failures="0" name="featurefiles/karate-15db.feature" skipped="0" tests="4" time="0.261081">
+  <testcase classname="featurefiles.karate-15db" name="select stmt test case" time="0.191869">
+    <system-out>* def db = Java.type('misc.mydbutil') ..................................... passed
+* def rows = db.selectStatement("select * from tools") .................... passed
+* print rows .............................................................. passed
+* match rows contains "Selenium" .......................................... passed</system-out>
+  </testcase>
+  <testcase classname="featurefiles.karate-15db" name="insert stmt test case" time="0.023894">
+    <system-out>* def db = Java.type('misc.mydbutil') ..................................... passed
+* def rows = db.selectStatement("select * from tools") .................... passed
+* print rows .............................................................. passed
+* match rows contains "Selenium" .......................................... passed
+* def db = Java.type('misc.mydbutil') ..................................... passed
+* def res = db.insertStatement("Insert into tools values(246,'sample2','xyz')") . passed
+* print res ............................................................... passed
+* match res == 'Success' .................................................. passed</system-out>
+  </testcase>
+  <testcase classname="featurefiles.karate-15db" name="update stmt test case" time="0.023182">
+    <system-out>* def db = Java.type('misc.mydbutil') ..................................... passed
+* def rows = db.selectStatement("select * from tools") .................... passed
+* print rows .............................................................. passed
+* match rows contains "Selenium" .......................................... passed
+* def db = Java.type('misc.mydbutil') ..................................... passed
+* def res = db.insertStatement("Insert into tools values(246,'sample2','xyz')") . passed
+* print res ............................................................... passed
+* match res == 'Success' .................................................. passed
+* def db = Java.type('misc.mydbutil') ..................................... passed
+* def rowsAffected = db.updateStatement("update tools set name='sample3' where id=246") . passed
+* print rowsAffected ...................................................... passed
+* assert rowsAffected &gt;= 1 ................................................ passed</system-out>
+  </testcase>
+  <testcase classname="featurefiles.karate-15db" name="delete stmt test case" time="0.022136">
+    <system-out>* def db = Java.type('misc.mydbutil') ..................................... passed
+* def rows = db.selectStatement("select * from tools") .................... passed
+* print rows .............................................................. passed
+* match rows contains "Selenium" .......................................... passed
+* def db = Java.type('misc.mydbutil') ..................................... passed
+* def res = db.insertStatement("Insert into tools values(246,'sample2','xyz')") . passed
+* print res ............................................................... passed
+* match res == 'Success' .................................................. passed
+* def db = Java.type('misc.mydbutil') ..................................... passed
+* def rowsAffected = db.updateStatement("update tools set name='sample3' where id=246") . passed
+* print rowsAffected ...................................................... passed
+* assert rowsAffected &gt;= 1 ................................................ passed
+* def db = Java.type('misc.mydbutil') ..................................... passed
+* def rowsAffected = db.deleteStatement("delete from tools where id=246") . passed
+* print rowsAffected ...................................................... passed
+* assert rowsAffected &gt;= 1 ................................................ passed</system-out>
+  </testcase>
+</testsuite>

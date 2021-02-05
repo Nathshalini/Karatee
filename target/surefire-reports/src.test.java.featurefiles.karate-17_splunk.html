@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>src.test.java.featurefiles.karate-17_splunk</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">1</div>
+            
+<div class="bg-danger" id="nav-fail">0</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2021-02-04 03:00:22 AM</div>        
+      
+<div class="nav-container">
+<div class="nav-item passed">
+<a href="#[1:22]">[1:22] Job Search 1 </a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/java/featurefiles/karate-17_splunk.feature</span><span class="feature-description">Splunk REST API | interacting with splunk server</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1:22]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [1:22]</span><span class="scenario-name">Job Search 1 </span>
+</div>
+<div class="scenario-time passed">ms: 599</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[1:22]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[1:22]bg">
+<div class="step-container" id="1">
+<div class="step-ref bg-step">1</div>
+<div class="step-cell passed">* def login =</div>
+</div>
+<div class="time-cell passed">6</div>
+</div>
+<div class="preformatted" data-parent="1">function(uid, pwd) {
+    var temp = uid + ':' + pwd;
+    var Base64 = Java.type('java.util.Base64');
+    var encoded = Base64.getEncoder().encodeToString(temp.bytes);
+    return 'Basic ' + encoded;
+}
+03:00:22.265 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</div>
+<div class="step-row" data-parent="[1:22]bg">
+<div class="step-container" id="2">
+<div class="step-ref bg-step">2</div>
+<div class="step-cell passed">* def auth = login("palmetoadmin", "P@lmeto@123")</div>
+</div>
+<div class="time-cell passed">55</div>
+</div>
+<div class="step-row" data-parent="[1:22]bg">
+<div class="step-container" id="3">
+<div class="step-ref bg-step">3</div>
+<div class="step-cell passed">* print auth</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="3">03:00:22.327 [print] Basic cGFsbWV0b2FkbWluOlBAbG1ldG9AMTIz</div>
+<div class="step-row" data-parent="[1:22]bg">
+<div class="step-container" id="4">
+<div class="step-ref bg-step">4</div>
+<div class="step-cell passed">* configure ssl = true</div>
+</div>
+<div class="time-cell passed">225</div>
+</div>
+<div class="step-row" data-parent="[1:22]bg">
+<div class="step-container" id="5">
+<div class="step-ref bg-step">5</div>
+<div class="step-cell passed">Given url "https://192.168.1.62:8089"</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row" data-parent="[1:22]bg">
+<div class="step-container" id="6">
+<div class="step-ref bg-step">6</div>
+<div class="step-cell passed">And header Authorization = auth</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="7">
+<div class="step-ref passed">7</div>
+<div class="step-cell passed">Given path "/services/search/jobs"</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="8">
+<div class="step-ref passed">8</div>
+<div class="step-cell passed">When method get</div>
+</div>
+<div class="time-cell passed">242</div>
+</div>
+<div class="preformatted" data-parent="8">03:00:22.639 request:
+1 &gt; GET https://192.168.1.62:8089/services/search/jobs
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Basic cGFsbWV0b2FkbWluOlBAbG1ldG9AMTIz
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: 192.168.1.62:8089
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+
+03:00:22.796 response time in milliseconds: 152.39
+1 &lt; 200
+1 &lt; Cache-Control: no-store, no-cache, must-revalidate, max-age=0
+1 &lt; Connection: Keep-Alive
+1 &lt; Content-Type: text/xml; charset=UTF-8
+1 &lt; Date: Thu, 04 Feb 2021 11:00:22 GMT
+1 &lt; Expires: Thu, 26 Oct 1978 00:00:00 GMT
+1 &lt; Server: Splunkd
+1 &lt; Vary: Accept-Encoding, Cookie, Authorization
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Frame-Options: SAMEORIGIN
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!--This is to override browser formatting; see server.conf[httpServer] to disable. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .--&gt;
+&lt;?xml-stylesheet type="text/xml" href="/static/atom.xsl"?&gt;
+&lt;feed xmlns="http://www.w3.org/2005/Atom" xmlns:s="http://dev.splunk.com/ns/rest" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/"&gt;
+  &lt;title&gt;jobs&lt;/title&gt;
+  &lt;id&gt;https://192.168.1.62:8089/services/search/jobs&lt;/id&gt;
+  &lt;updated&gt;2021-02-04T16:30:22+05:30&lt;/updated&gt;
+  &lt;generator build="08187535c166" version="8.1.1"/&gt;
+  &lt;author&gt;
+    &lt;name&gt;Splunk&lt;/name&gt;
+  &lt;/author&gt;
+  &lt;opensearch:totalResults&gt;1&lt;/opensearch:totalResults&gt;
+  &lt;opensearch:itemsPerPage&gt;0&lt;/opensearch:itemsPerPage&gt;
+  &lt;opensearch:startIndex&gt;0&lt;/opensearch:startIndex&gt;
+  &lt;entry&gt;
+    &lt;title&gt;| archivebuckets&lt;/title&gt;
+    &lt;id&gt;https://192.168.1.62:8089/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612435620_1&lt;/id&gt;
+    &lt;updated&gt;2021-02-04T16:17:01.257+05:30&lt;/updated&gt;
+    &lt;link href="/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612435620_1" rel="alternate"/&gt;
+    &lt;published&gt;2021-02-04T16:17:00.000+05:30&lt;/published&gt;
+    &lt;link href="/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612435620_1/search.log" rel="search.log"/&gt;
+    &lt;link href="/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612435620_1/search_telemetry.json" rel="search_telemetry.json"/&gt;
+    &lt;link href="/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612435620_1/events" rel="events"/&gt;
+    &lt;link href="/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612435620_1/results" rel="results"/&gt;
+    &lt;link href="/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612435620_1/results_preview" rel="results_preview"/&gt;
+    &lt;link href="/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612435620_1/timeline" rel="timeline"/&gt;
+    &lt;link href="/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612435620_1/summary" rel="summary"/&gt;
+    &lt;link href="/services/search/jobs/scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612435620_1/control" rel="control"/&gt;
+    &lt;author&gt;
+      &lt;name&gt;splunk-system-user&lt;/name&gt;
+    &lt;/author&gt;
+    &lt;content type="text/xml"&gt;
+      &lt;s:dict&gt;
+        &lt;s:key name="canSummarize"&gt;0&lt;/s:key&gt;
+        &lt;s:key name="cursorTime"&gt;1970-01-01T05:30:00.000+05:30&lt;/s:key&gt;
+        &lt;s:key name="defaultSaveTTL"&gt;604800&lt;/s:key&gt;
+        &lt;s:key name="defaultTTL"&gt;600&lt;/s:key&gt;
+        &lt;s:key name="delegate"&gt;scheduler&lt;/s:key&gt;
+        &lt;s:key name="diskUsage"&gt;53248&lt;/s:key&gt;
+        &lt;s:key name="dispatchState"&gt;DONE&lt;/s:key&gt;
+        &lt;s:key name="doneProgress"&gt;1.00000&lt;/s:key&gt;
+        &lt;s:key name="dropCount"&gt;0&lt;/s:key&gt;
+        &lt;s:key name="earliestTime"&gt;1970-01-01T05:30:00.000+05:30&lt;/s:key&gt;
+        &lt;s:key name="eventAvailableCount"&gt;0&lt;/s:key&gt;
+        &lt;s:key name="eventCount"&gt;0&lt;/s:key&gt;
+        &lt;s:key name="eventFieldCount"&gt;0&lt;/s:key&gt;
+        &lt;s:key name="eventIsStreaming"&gt;1&lt;/s:key&gt;
+        &lt;s:key name="eventIsTruncated"&gt;0&lt;/s:key&gt;
+        &lt;s:key name="eventSearch"&gt;archivebuckets &lt;/s:key&gt;
+        &lt;s:key name="eventSorting"&gt;none&lt;/s:key&gt;
+        &lt;s:key name="isBatchModeSearch"&gt;0&lt;/s:key&gt;
+        &lt;s:key name="isDone"&gt;1&lt;/s:key&gt;
+        &lt;s:key name="isEventsPreviewEnabled"&gt;0&lt;/s:key&gt;
+        &lt;s:key name="isFailed"&gt;0&lt;/s:key&gt;
+        &lt;s:key name="isFinalized"&gt;0&lt;/s:key&gt;
+        &lt;s:key name="isPaused"&gt;0&lt;/s:key&gt;
+        &lt;s:key name="isPreviewEnabled"&gt;0&lt;/s:key&gt;
+        &lt;s:key name="isRealTimeSearch"&gt;0&lt;/s:key&gt;
+        &lt;s:key name="isRemoteTimeline"&gt;0&lt;/s:key&gt;
+        &lt;s:key name="isSaved"&gt;0&lt;/s:key&gt;
+        &lt;s:key name="isSavedSearch"&gt;1&lt;/s:key&gt;
+        &lt;s:key name="isTimeCursored"&gt;0&lt;/s:key&gt;
+        &lt;s:key name="isZombie"&gt;0&lt;/s:key&gt;
+        &lt;s:key name="keywords"&gt;&lt;/s:key&gt;
+        &lt;s:key name="label"&gt;Bucket Copy Trigger&lt;/s:key&gt;
+        &lt;s:key name="latestTime"&gt;2021-02-04T16:17:00.000+05:30&lt;/s:key&gt;
+        &lt;s:key name="normalizedSearch"&gt;&lt;/s:key&gt;
+        &lt;s:key name="numPreviews"&gt;0&lt;/s:key&gt;
+        &lt;s:key name="optimizedSearch"&gt;| archivebuckets&lt;/s:key&gt;
+        &lt;s:key name="phase0"&gt;&lt;/s:key&gt;
+        &lt;s:key name="phase1"&gt;archivebuckets  | timeliner  remote=0 partial_commits=0 max_events_per_bucket=500000 fieldstats_update_maxperiod=60 bucket=0&lt;/s:key&gt;
+        &lt;s:key name="pid"&gt;50285&lt;/s:key&gt;
+        &lt;s:key name="priority"&gt;5&lt;/s:key&gt;
+        &lt;s:key name="provenance"&gt;scheduler&lt;/s:key&gt;
+        &lt;s:key name="remoteSearch"&gt;&lt;/s:key&gt;
+        &lt;s:key name="reportSearch"&gt;&lt;/s:key&gt;
+        &lt;s:key name="resultCount"&gt;0&lt;/s:key&gt;
+        &lt;s:key name="resultIsStreaming"&gt;1&lt;/s:key&gt;
+        &lt;s:key name="resultPreviewCount"&gt;0&lt;/s:key&gt;
+        &lt;s:key name="runDuration"&gt;0.671&lt;/s:key&gt;
+        &lt;s:key name="sampleRatio"&gt;1&lt;/s:key&gt;
+        &lt;s:key name="sampleSeed"&gt;0&lt;/s:key&gt;
+        &lt;s:key name="savedSearchLabel"&gt;{"owner":"nobody","app":"splunk_archiver","sharing":"app"}&lt;/s:key&gt;
+        &lt;s:key name="scanCount"&gt;0&lt;/s:key&gt;
+        &lt;s:key name="search"&gt;| archivebuckets&lt;/s:key&gt;
+        &lt;s:key name="searchCanBeEventType"&gt;0&lt;/s:key&gt;
+        &lt;s:key name="searchLatestTime"&gt;1612435620.000000000&lt;/s:key&gt;
+        &lt;s:key name="searchTotalBucketsCount"&gt;0&lt;/s:key&gt;
+        &lt;s:key name="searchTotalEliminatedBucketsCount"&gt;0&lt;/s:key&gt;
+        &lt;s:key name="sid"&gt;scheduler__nobody_c3BsdW5rX2FyY2hpdmVy__RMD5473cbac83d6c9db7_at_1612435620_1&lt;/s:key&gt;
+        &lt;s:key name="statusBuckets"&gt;0&lt;/s:key&gt;
+        &lt;s:key name="ttl"&gt;6399&lt;/s:key&gt;
+        &lt;s:key name="workload_action_information"&gt;&lt;/s:key&gt;
+        &lt;s:key name="workload_pool"&gt;&lt;/s:key&gt;
+        &lt;s:key name="performance"&gt;
+          &lt;s:dict&gt;
+            &lt;s:key name="command.archivebuckets"&gt;
+              &lt;s:dict&gt;
+                &lt;s:key name="duration_secs"&gt;0.647&lt;/s:key&gt;
+                &lt;s:key name="invocations"&gt;1&lt;/s:key&gt;
+                &lt;s:key name="input_count"&gt;0&lt;/s:key&gt;
+                &lt;s:key name="output_count"&gt;0&lt;/s:key&gt;
+              &lt;/s:dict&gt;
+            &lt;/s:key&gt;
+            &lt;s:key name="command.timeliner"&gt;
+              &lt;s:dict&gt;
+                &lt;s:key name="invocations"&gt;1&lt;/s:key&gt;
+                &lt;s:key name="input_count"&gt;0&lt;/s:key&gt;
+                &lt;s:key name="output_count"&gt;0&lt;/s:key&gt;
+              &lt;/s:dict&gt;
+            &lt;/s:key&gt;
+            &lt;s:key name="dispatch.createdSearchResultInfrastructure"&gt;
+              &lt;s:dict&gt;
+                &lt;s:key name="duration_secs"&gt;0.001&lt;/s:key&gt;
+                &lt;s:key name="invocations"&gt;1&lt;/s:key&gt;
+              &lt;/s:dict&gt;
+            &lt;/s:key&gt;
+            &lt;s:key name="dispatch.evaluate.archivebuckets"&gt;
+              &lt;s:dict&gt;
+                &lt;s:key name="invocations"&gt;2&lt;/s:key&gt;
+              &lt;/s:dict&gt;
+            &lt;/s:key&gt;
+            &lt;s:key name="dispatch.finalWriteToDisk"&gt;
+              &lt;s:dict&gt;
+                &lt;s:key name="invocations"&gt;1&lt;/s:key&gt;
+              &lt;/s:dict&gt;
+            &lt;/s:key&gt;
+            &lt;s:key name="dispatch.readEventsInResults"&gt;
+              &lt;s:dict&gt;
+                &lt;s:key name="invocations"&gt;1&lt;/s:key&gt;
+              &lt;/s:dict&gt;
+            &lt;/s:key&gt;
+            &lt;s:key name="dispatch.timeline"&gt;
+              &lt;s:dict&gt;
+                &lt;s:key name="invocations"&gt;1&lt;/s:key&gt;
+              &lt;/s:dict&gt;
+            &lt;/s:key&gt;
+            &lt;s:key name="dispatch.writeStatus"&gt;
+              &lt;s:dict&gt;
+                &lt;s:key name="invocations"&gt;3&lt;/s:key&gt;
+              &lt;/s:dict&gt;
+            &lt;/s:key&gt;
+            &lt;s:key name="startup.configuration"&gt;
+              &lt;s:dict&gt;
+                &lt;s:key name="duration_secs"&gt;0.012&lt;/s:key&gt;
+                &lt;s:key name="invocations"&gt;2&lt;/s:key&gt;
+              &lt;/s:dict&gt;
+            &lt;/s:key&gt;
+            &lt;s:key name="startup.handoff"&gt;
+              &lt;s:dict&gt;
+                &lt;s:key name="duration_secs"&gt;0.058&lt;/s:key&gt;
+                &lt;s:key name="invocations"&gt;2&lt;/s:key&gt;
+              &lt;/s:dict&gt;
+            &lt;/s:key&gt;
+          &lt;/s:dict&gt;
+        &lt;/s:key&gt;
+        &lt;s:key name="messages"&gt;
+          &lt;s:dict/&gt;
+        &lt;/s:key&gt;
+        &lt;s:key name="request"&gt;
+          &lt;s:dict&gt;
+            &lt;s:key name="auto_cancel"&gt;0&lt;/s:key&gt;
+            &lt;s:key name="auto_pause"&gt;0&lt;/s:key&gt;
+            &lt;s:key name="buckets"&gt;0&lt;/s:key&gt;
+            &lt;s:key name="earliest_time"&gt;&lt;/s:key&gt;
+            &lt;s:key name="index_earliest"&gt;&lt;/s:key&gt;
+            &lt;s:key name="index_latest"&gt;&lt;/s:key&gt;
+            &lt;s:key name="indexedRealtime"&gt;&lt;/s:key&gt;
+            &lt;s:key name="indexedRealtimeMinSpan"&gt;&lt;/s:key&gt;
+            &lt;s:key name="indexedRealtimeOffset"&gt;&lt;/s:key&gt;
+            &lt;s:key name="latest_time"&gt;now&lt;/s:key&gt;
+            &lt;s:key name="lookups"&gt;1&lt;/s:key&gt;
+            &lt;s:key name="max_count"&gt;500000&lt;/s:key&gt;
+            &lt;s:key name="max_time"&gt;0&lt;/s:key&gt;
+            &lt;s:key name="reduce_freq"&gt;10&lt;/s:key&gt;
+            &lt;s:key name="rt_backfill"&gt;0&lt;/s:key&gt;
+            &lt;s:key name="rt_maximum_span"&gt;&lt;/s:key&gt;
+            &lt;s:key name="sample_ratio"&gt;1&lt;/s:key&gt;
+            &lt;s:key name="spawn_process"&gt;1&lt;/s:key&gt;
+            &lt;s:key name="time_format"&gt;%FT%T.%Q%:z&lt;/s:key&gt;
+            &lt;s:key name="ui_dispatch_app"&gt;&lt;/s:key&gt;
+            &lt;s:key name="ui_dispatch_view"&gt;&lt;/s:key&gt;
+          &lt;/s:dict&gt;
+        &lt;/s:key&gt;
+        &lt;s:key name="eai:acl"&gt;
+          &lt;s:dict&gt;
+            &lt;s:key name="perms"&gt;
+              &lt;s:dict&gt;
+                &lt;s:key name="read"&gt;
+                  &lt;s:list&gt;
+                    &lt;s:item&gt;*&lt;/s:item&gt;
+                    &lt;s:item&gt;splunk-system-user&lt;/s:item&gt;
+                  &lt;/s:list&gt;
+                &lt;/s:key&gt;
+                &lt;s:key name="write"&gt;
+                  &lt;s:list&gt;
+                    &lt;s:item&gt;*&lt;/s:item&gt;
+                    &lt;s:item&gt;splunk-system-user&lt;/s:item&gt;
+                  &lt;/s:list&gt;
+                &lt;/s:key&gt;
+              &lt;/s:dict&gt;
+            &lt;/s:key&gt;
+            &lt;s:key name="owner"&gt;splunk-system-user&lt;/s:key&gt;
+            &lt;s:key name="modifiable"&gt;1&lt;/s:key&gt;
+            &lt;s:key name="sharing"&gt;global&lt;/s:key&gt;
+            &lt;s:key name="app"&gt;splunk_archiver&lt;/s:key&gt;
+            &lt;s:key name="can_write"&gt;1&lt;/s:key&gt;
+            &lt;s:key name="ttl"&gt;7200&lt;/s:key&gt;
+          &lt;/s:dict&gt;
+        &lt;/s:key&gt;
+        &lt;s:key name="searchProviders"&gt;
+          &lt;s:list/&gt;
+        &lt;/s:key&gt;
+      &lt;/s:dict&gt;
+    &lt;/content&gt;
+  &lt;/entry&gt;
+&lt;/feed&gt;</div>
+<div class="step-row">
+<div class="step-container" id="9">
+<div class="step-ref passed">9</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="10">
+<div class="step-ref passed">10</div>
+<div class="step-cell passed">* print responseType</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="10">03:00:22.796 [print] xml</div>
+<div class="step-row">
+<div class="step-container" id="11">
+<div class="step-ref passed">11</div>
+<div class="step-cell passed">* def util = Java.type("misc.utils")</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="12">
+<div class="step-ref passed">12</div>
+<div class="step-cell passed">* def res = get response</div>
+</div>
+<div class="time-cell passed">50</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="13">
+<div class="step-ref passed">13</div>
+<div class="step-cell passed">* util.writeToFile("splunkOutput.txt", res)</div>
+</div>
+<div class="time-cell passed">6</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-cell comment">#---- when response xml is too large, get relevant node and then validate it</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="14">
+<div class="step-ref passed">14</div>
+<div class="step-cell passed">* def title = get response //feed/title</div>
+</div>
+<div class="time-cell passed">4</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="15">
+<div class="step-ref passed">15</div>
+<div class="step-cell passed">* print title</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="15">03:00:22.874 [print] jobs</div>
+<div class="step-row">
+<div class="step-container" id="16">
+<div class="step-ref passed">16</div>
+<div class="step-cell passed">* match title == "jobs"</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>

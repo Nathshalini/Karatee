@@ -1,0 +1,11 @@
+<testsuite failures="0" name="src/test/java/featurefiles/karate-16.feature" skipped="0" tests="1" time="0.810475">
+  <testcase classname="src.test.java.featurefiles.karate-16" name="Writing to a file" time="0.810475">
+    <system-out>* def temp = Java.type('misc.utils') ...................................... passed
+Given url "https://reqres.in/api/users?page=2" ............................ passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* def res = get response $.data.[0].email ................................. passed
+* print res ............................................................... passed
+* temp.writeToFile("result.json", res); ................................... passed</system-out>
+  </testcase>
+</testsuite>

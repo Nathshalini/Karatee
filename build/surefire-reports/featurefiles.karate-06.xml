@@ -1,0 +1,13 @@
+<testsuite failures="1" name="featurefiles/karate-06.feature" skipped="0" tests="1" time="0.006898">
+  <testcase classname="featurefiles.karate-06" name="Karate Test Case 1" time="0.006898">
+    <failure message="karate-06.feature:7 - assert evaluated to false: a==19 &amp;&amp; b==20">Given def a = 10 .......................................................... passed
+And def b = 20 ............................................................ passed
+* assert a==19 &amp;&amp; b==20 ................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate-06.feature:7 - assert evaluated to false: a==19 &amp;&amp; b==20&#13;
+	at ✽.* assert a==19 &amp;&amp; b==20 (karate-06.feature:7)&#13;
+
+* print "after assertion" ................................................. skipped</failure>
+  </testcase>
+</testsuite>

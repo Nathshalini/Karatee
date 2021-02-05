@@ -1,0 +1,31 @@
+<testsuite failures="1" name="featurefiles/karate-16.feature" skipped="0" tests="2" time="0.30901">
+  <testcase classname="featurefiles.karate-16" name="Writing to a file" time="0.303811">
+    <system-out>* def temp = Java.type('misc.utils') ...................................... passed
+Given url "https://reqres.in/api/users?page=2" ............................ passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* def res = get response $.data.[0].email ................................. passed
+* print res ............................................................... passed
+* temp.writeToFile("result.json", res); ................................... passed</system-out>
+  </testcase>
+  <testcase classname="featurefiles.karate-16" name="Reading Result File" time="0.005199">
+    <failure message="karate-16.feature:22 - evaluation (js) failed: read(&quot;classpath:result.json&quot;), java.lang.RuntimeException: evaluation (js) failed: michael.lawson@reqres.in, javax.script.ScriptException: &lt;eval&gt;:1:14 Expected ; but found error&#13;&#10;michael.lawson@reqres.in&#13;&#10;              ^ in &lt;eval&gt; at line number 1 at column number 14&#10;stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)&#10;stack trace: com.intuit.karate.ScriptBindings.eval(ScriptBindings.java:155)">* def temp = Java.type('misc.utils') ...................................... passed
+Given url "https://reqres.in/api/users?page=2" ............................ passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* def res = get response $.data.[0].email ................................. passed
+* print res ............................................................... passed
+* temp.writeToFile("result.json", res); ................................... passed
+* def data = read("classpath:result.json") ................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate-16.feature:22 - evaluation (js) failed: read("classpath:result.json"), java.lang.RuntimeException: evaluation (js) failed: michael.lawson@reqres.in, javax.script.ScriptException: &lt;eval&gt;:1:14 Expected ; but found error&#13;
+michael.lawson@reqres.in&#13;
+              ^ in &lt;eval&gt; at line number 1 at column number 14
+stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)
+stack trace: com.intuit.karate.ScriptBindings.eval(ScriptBindings.java:155)&#13;
+	at ✽.* def data = read("classpath:result.json") (karate-16.feature:22)&#13;
+
+* print data .............................................................. skipped</failure>
+  </testcase>
+</testsuite>

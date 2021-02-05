@@ -1,0 +1,13 @@
+<testsuite failures="1" name="src/test/java/featurefiles/karate03.feature" skipped="0" tests="1" time="0.006577">
+  <testcase classname="src.test.java.featurefiles.karate03" name="xml test case 6" time="0.006577">
+    <failure message="karate03.feature:57 - evaluation (js) failed: ( xml/info/tool[1]/name contains &quot;Karate&quot; &amp;&amp; xml/info/tool[2]/name contains &quot;IntelliJ&quot; ), javax.script.ScriptException: &lt;eval&gt;:1:24 Expected ) but found contains&#13;&#10;( xml/info/tool[1]/name contains &quot;Karate&quot; &amp;&amp; xml/info/tool[2]/name contains &quot;IntelliJ&quot; )&#13;&#10;                        ^ in &lt;eval&gt; at line number 1 at column number 24&#10;stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)">Given def xml = ........................................................... passed
+* assert ( xml/info/tool[1]/name contains "Karate" &amp;&amp; xml/info/tool[2]/name contains "IntelliJ" ) . failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate03.feature:57 - evaluation (js) failed: ( xml/info/tool[1]/name contains "Karate" &amp;&amp; xml/info/tool[2]/name contains "IntelliJ" ), javax.script.ScriptException: &lt;eval&gt;:1:24 Expected ) but found contains&#13;
+( xml/info/tool[1]/name contains "Karate" &amp;&amp; xml/info/tool[2]/name contains "IntelliJ" )&#13;
+                        ^ in &lt;eval&gt; at line number 1 at column number 24
+stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)&#13;
+	at ✽.* assert ( xml/info/tool[1]/name contains "Karate" &amp;&amp; xml/info/tool[2]/name contains "IntelliJ" ) (karate03.feature:57)</failure>
+  </testcase>
+</testsuite>

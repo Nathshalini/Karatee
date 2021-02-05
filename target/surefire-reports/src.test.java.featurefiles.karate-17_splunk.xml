@@ -1,0 +1,20 @@
+<testsuite failures="0" name="src/test/java/featurefiles/karate-17_splunk.feature" skipped="0" tests="1" time="0.598581">
+  <testcase classname="src.test.java.featurefiles.karate-17_splunk" name="Job Search 1" time="0.598581">
+    <system-out>* def login = ............................................................. passed
+* def auth = login("palmetoadmin", "P@lmeto@123") ......................... passed
+* print auth .............................................................. passed
+* configure ssl = true .................................................... passed
+Given url "https://192.168.1.62:8089" ..................................... passed
+And header Authorization = auth ........................................... passed
+Given path "/services/search/jobs" ........................................ passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* print responseType ...................................................... passed
+* def util = Java.type("misc.utils") ...................................... passed
+* def res = get response .................................................. passed
+* util.writeToFile("splunkOutput.txt", res) ............................... passed
+* def title = get response //feed/title ................................... passed
+* print title ............................................................. passed
+* match title == "jobs" ................................................... passed</system-out>
+  </testcase>
+</testsuite>

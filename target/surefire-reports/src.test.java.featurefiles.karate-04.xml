@@ -1,0 +1,22 @@
+<testsuite failures="0" name="src/test/java/featurefiles/karate-04.feature" skipped="0" tests="1" time="1.428603">
+  <testcase classname="src.test.java.featurefiles.karate-04" name="soap api testcase2" time="1.428603">
+    <system-out>Given url "http://www.dneonline.com//calculator.asmx" ..................... passed
+And header Content-Type = "text/xml; charset=utf-8" ....................... passed
+And request ............................................................... passed
+When soap action "http://tempuri.org/Add" ................................. passed
+Then status 200 ........................................................... passed
+* print responseHeaders ................................................... passed
+* print responseHeaders["Server"] ......................................... passed
+* print responseHeaders["Server"][0] ...................................... passed
+* match responseHeaders["Server"] == ["Microsoft-IIS/8.0"] ................ passed
+* match responseHeaders["Server"][0] == "Microsoft-IIS/8.0" ............... passed
+* print responseType ...................................................... passed
+* match responseType == "xml" ............................................. passed
+* print response .......................................................... passed
+* match response contains "15" ............................................ passed
+* match response //AddResult == "15" ...................................... passed
+* print responseTime ...................................................... passed
+* assert responseTime &lt;= 2000 ............................................. passed
+* print responseStatus .................................................... passed</system-out>
+  </testcase>
+</testsuite>

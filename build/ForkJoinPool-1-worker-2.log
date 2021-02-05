@@ -1,0 +1,27 @@
+02:32:52.426 From karate-config file 
+02:32:52.707 request:
+1 > POST https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 12
+1 > Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+1 > Host: www.w3schools.com
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+Celsius = 40
+
+02:32:53.208 response time in milliseconds: 485.68
+1 < 500
+1 < Cache-Control: private,public
+1 < Content-Length: 29
+1 < Content-Type: text/plain; charset=utf-8
+1 < Date: Fri, 05 Feb 2021 10:24:41 GMT
+1 < Server: Microsoft-IIS/7.5
+1 < X-AspNet-Version: 4.0.30319
+1 < X-Frame-Options: SAMEORIGIN
+1 < X-Powered-By: ASP.NET
+Missing parameter: Celsius.
+
+
+02:32:53.208 status code was: 500, expected: 200, response time: 486, url: https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit, response: Missing parameter: Celsius.
+
+02:32:53.208 after scenario inside config 

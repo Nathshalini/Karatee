@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>featurefiles.karate-12ddt</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">0</div>
+            
+<div class="bg-danger" id="nav-fail">4</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2021-02-05 02:32:53 AM</div>        
+      
+<div class="nav-container">
+<div class="nav-item failed">
+<a href="#[1.1:20]">[1.1:20] ddt testcase1 </a>
+</div>
+<div class="nav-item failed">
+<a href="#[1.2:21]">[1.2:21] ddt testcase1 </a>
+</div>
+<div class="nav-item failed">
+<a href="#[2.1:25]">[2.1:25] ddt testcase2 </a>
+</div>
+<div class="nav-item failed">
+<a href="#[2.2:25]">[2.2:25] ddt testcase2 </a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">featurefiles/karate-12ddt.feature</span><span class="feature-description">karate tst suite 12 | data driven testing</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1.1:20]">
+<div class="heading-container">
+<div class="scenario-tags">
+<a class="badge badge-primary" href="karate-tags.html">ddt</a>
+</div>
+<span class="scenario-keyword">Scenario Outline: [1.1:20]</span><span class="scenario-name">ddt testcase1 </span>
+</div>
+<div class="scenario-time failed">ms: 804</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="1">
+<div class="step-ref passed">1</div>
+<div class="step-cell passed">Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit"</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="preformatted" data-parent="1">02:32:52.411 From karate-config file</div>
+<div class="step-row">
+<div class="step-container" id="2">
+<div class="step-ref passed">2</div>
+<div class="step-cell passed">And header Content-Type = "application/x-www-form-urlencoded"</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="3">
+<div class="step-ref passed">3</div>
+<div class="step-cell passed">And request "Celsius = 37"</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="4">
+<div class="step-ref passed">4</div>
+<div class="step-cell passed">When method post</div>
+</div>
+<div class="time-cell passed">794</div>
+</div>
+<div class="preformatted" data-parent="4">02:32:52.707 request:
+1 &gt; POST https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 12
+1 &gt; Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+1 &gt; Host: www.w3schools.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+Celsius = 37
+
+02:32:53.208 response time in milliseconds: 485.82
+1 &lt; 500
+1 &lt; Cache-Control: private,public
+1 &lt; Content-Length: 29
+1 &lt; Content-Type: text/plain; charset=utf-8
+1 &lt; Date: Fri, 05 Feb 2021 10:24:41 GMT
+1 &lt; Server: Microsoft-IIS/7.5
+1 &lt; X-AspNet-Version: 4.0.30319
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; X-Powered-By: ASP.NET
+Missing parameter: Celsius.</div>
+<div class="step-row">
+<div class="step-container" id="5">
+<div class="step-ref failed">5</div>
+<div class="step-cell failed">Then status 200</div>
+</div>
+<div class="time-cell failed">5</div>
+</div>
+<div class="preformatted" data-parent="5">02:32:53.223 status code was: 500, expected: 200, response time: 486, url: https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit, response: Missing parameter: Celsius.
+karate-12ddt.feature:10 - status code was: 500, expected: 200, response time: 486, url: https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit, response: Missing parameter: Celsius.&#13;
+</div>
+<div class="step-row">
+<div class="step-container" id="6">
+<div class="step-ref skipped">6</div>
+<div class="step-cell skipped">* print responseHeaders</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="7">
+<div class="step-ref skipped">7</div>
+<div class="step-cell skipped">* print responseType</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="8">
+<div class="step-ref skipped">8</div>
+<div class="step-cell skipped">* print response</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="9">
+<div class="step-ref skipped">9</div>
+<div class="step-cell skipped">* match responseType == "xml"</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="10">
+<div class="step-ref skipped">10</div>
+<div class="step-cell skipped">* assert responseTime &lt;= 1000</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="11">
+<div class="step-ref skipped">11</div>
+<div class="step-cell skipped">* match response //string == 98.6</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="preformatted" data-parent="11">02:32:53.223 after scenario inside config</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1.2:21]">
+<div class="heading-container">
+<div class="scenario-tags">
+<a class="badge badge-primary" href="karate-tags.html">ddt</a>
+</div>
+<span class="scenario-keyword">Scenario Outline: [1.2:21]</span><span class="scenario-name">ddt testcase1 </span>
+</div>
+<div class="scenario-time failed">ms: 781</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="12">
+<div class="step-ref passed">12</div>
+<div class="step-cell passed">Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit"</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="12">02:32:52.426 From karate-config file</div>
+<div class="step-row">
+<div class="step-container" id="13">
+<div class="step-ref passed">13</div>
+<div class="step-cell passed">And header Content-Type = "application/x-www-form-urlencoded"</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="14">
+<div class="step-ref passed">14</div>
+<div class="step-cell passed">And request "Celsius = 40"</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="15">
+<div class="step-ref passed">15</div>
+<div class="step-cell passed">When method post</div>
+</div>
+<div class="time-cell passed">777</div>
+</div>
+<div class="preformatted" data-parent="15">02:32:52.707 request:
+1 &gt; POST https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 12
+1 &gt; Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+1 &gt; Host: www.w3schools.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+Celsius = 40
+
+02:32:53.208 response time in milliseconds: 485.68
+1 &lt; 500
+1 &lt; Cache-Control: private,public
+1 &lt; Content-Length: 29
+1 &lt; Content-Type: text/plain; charset=utf-8
+1 &lt; Date: Fri, 05 Feb 2021 10:24:41 GMT
+1 &lt; Server: Microsoft-IIS/7.5
+1 &lt; X-AspNet-Version: 4.0.30319
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; X-Powered-By: ASP.NET
+Missing parameter: Celsius.</div>
+<div class="step-row">
+<div class="step-container" id="16">
+<div class="step-ref failed">16</div>
+<div class="step-cell failed">Then status 200</div>
+</div>
+<div class="time-cell failed">2</div>
+</div>
+<div class="preformatted" data-parent="16">02:32:53.208 status code was: 500, expected: 200, response time: 486, url: https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit, response: Missing parameter: Celsius.
+karate-12ddt.feature:10 - status code was: 500, expected: 200, response time: 486, url: https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit, response: Missing parameter: Celsius.&#13;
+</div>
+<div class="step-row">
+<div class="step-container" id="17">
+<div class="step-ref skipped">17</div>
+<div class="step-cell skipped">* print responseHeaders</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="18">
+<div class="step-ref skipped">18</div>
+<div class="step-cell skipped">* print responseType</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="19">
+<div class="step-ref skipped">19</div>
+<div class="step-cell skipped">* print response</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="20">
+<div class="step-ref skipped">20</div>
+<div class="step-cell skipped">* match responseType == "xml"</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="21">
+<div class="step-ref skipped">21</div>
+<div class="step-cell skipped">* assert responseTime &lt;= 1000</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="22">
+<div class="step-ref skipped">22</div>
+<div class="step-cell skipped">* match response //string == 104</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="preformatted" data-parent="22">02:32:53.208 after scenario inside config</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[2.1:25]">
+<div class="heading-container">
+<div class="scenario-tags">
+<a class="badge badge-primary" href="karate-tags.html">ddt</a>
+</div>
+<span class="scenario-keyword">Scenario Outline: [2.1:25]</span><span class="scenario-name">ddt testcase2 </span>
+</div>
+<div class="scenario-time failed">ms: 744</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="23">
+<div class="step-ref passed">23</div>
+<div class="step-cell passed">Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit"</div>
+</div>
+<div class="time-cell passed">10</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="24">
+<div class="step-ref passed">24</div>
+<div class="step-cell passed">And header Content-Type = "application/x-www-form-urlencoded"</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="25">
+<div class="step-ref passed">25</div>
+<div class="step-cell passed">And request "Celsius = 37"</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="26">
+<div class="step-ref passed">26</div>
+<div class="step-cell passed">When method POST</div>
+</div>
+<div class="time-cell passed">729</div>
+</div>
+<div class="preformatted" data-parent="26">02:32:52.707 request:
+1 &gt; POST https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 12
+1 &gt; Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+1 &gt; Host: www.w3schools.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+Celsius = 37
+
+02:32:53.208 response time in milliseconds: 486.70
+1 &lt; 500
+1 &lt; Cache-Control: private,public
+1 &lt; Content-Length: 29
+1 &lt; Content-Type: text/plain; charset=utf-8
+1 &lt; Date: Fri, 05 Feb 2021 10:24:41 GMT
+1 &lt; Server: Microsoft-IIS/7.5
+1 &lt; X-AspNet-Version: 4.0.30319
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; X-Powered-By: ASP.NET
+Missing parameter: Celsius.</div>
+<div class="step-row">
+<div class="step-container" id="27">
+<div class="step-ref failed">27</div>
+<div class="step-cell failed">Then status 200</div>
+</div>
+<div class="time-cell failed">4</div>
+</div>
+<div class="preformatted" data-parent="27">02:32:53.223 status code was: 500, expected: 200, response time: 487, url: https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit, response: Missing parameter: Celsius.
+karate-12ddt.feature:30 - status code was: 500, expected: 200, response time: 487, url: https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit, response: Missing parameter: Celsius.&#13;
+</div>
+<div class="step-row">
+<div class="step-container" id="28">
+<div class="step-ref skipped">28</div>
+<div class="step-cell skipped">* print responseHeaders</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="29">
+<div class="step-ref skipped">29</div>
+<div class="step-cell skipped">* print responseType</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="30">
+<div class="step-ref skipped">30</div>
+<div class="step-cell skipped">* print response</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="31">
+<div class="step-ref skipped">31</div>
+<div class="step-cell skipped">* match responseType == "xml"</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="32">
+<div class="step-ref skipped">32</div>
+<div class="step-cell skipped">* assert responseTime &lt;= 1000</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="33">
+<div class="step-ref skipped">33</div>
+<div class="step-cell skipped">* match response //string == 98.6</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[2.2:25]">
+<div class="heading-container">
+<div class="scenario-tags">
+<a class="badge badge-primary" href="karate-tags.html">ddt</a>
+</div>
+<span class="scenario-keyword">Scenario Outline: [2.2:25]</span><span class="scenario-name">ddt testcase2 </span>
+</div>
+<div class="scenario-time failed">ms: 783</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="34">
+<div class="step-ref passed">34</div>
+<div class="step-cell passed">Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit"</div>
+</div>
+<div class="time-cell passed">25</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="35">
+<div class="step-ref passed">35</div>
+<div class="step-cell passed">And header Content-Type = "application/x-www-form-urlencoded"</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="36">
+<div class="step-ref passed">36</div>
+<div class="step-cell passed">And request "Celsius = 40"</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="37">
+<div class="step-ref passed">37</div>
+<div class="step-cell passed">When method POST</div>
+</div>
+<div class="time-cell passed">752</div>
+</div>
+<div class="preformatted" data-parent="37">02:32:52.723 request:
+1 &gt; POST https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 12
+1 &gt; Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+1 &gt; Host: www.w3schools.com
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_251)
+Celsius = 40
+
+02:32:53.208 response time in milliseconds: 483.24
+1 &lt; 500
+1 &lt; Cache-Control: private,public
+1 &lt; Content-Length: 29
+1 &lt; Content-Type: text/plain; charset=utf-8
+1 &lt; Date: Fri, 05 Feb 2021 10:24:41 GMT
+1 &lt; Server: Microsoft-IIS/7.5
+1 &lt; X-AspNet-Version: 4.0.30319
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; X-Powered-By: ASP.NET
+Missing parameter: Celsius.</div>
+<div class="step-row">
+<div class="step-container" id="38">
+<div class="step-ref failed">38</div>
+<div class="step-cell failed">Then status 200</div>
+</div>
+<div class="time-cell failed">6</div>
+</div>
+<div class="preformatted" data-parent="38">02:32:53.223 status code was: 500, expected: 200, response time: 483, url: https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit, response: Missing parameter: Celsius.
+karate-12ddt.feature:30 - status code was: 500, expected: 200, response time: 483, url: https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit, response: Missing parameter: Celsius.&#13;
+</div>
+<div class="step-row">
+<div class="step-container" id="39">
+<div class="step-ref skipped">39</div>
+<div class="step-cell skipped">* print responseHeaders</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="40">
+<div class="step-ref skipped">40</div>
+<div class="step-cell skipped">* print responseType</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="41">
+<div class="step-ref skipped">41</div>
+<div class="step-cell skipped">* print response</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="42">
+<div class="step-ref skipped">42</div>
+<div class="step-cell skipped">* match responseType == "xml"</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="43">
+<div class="step-ref skipped">43</div>
+<div class="step-cell skipped">* assert responseTime &lt;= 1000</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="44">
+<div class="step-ref skipped">44</div>
+<div class="step-cell skipped">* match response //string == 104</div>
+</div>
+<div class="time-cell skipped">0</div>
+</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>
